@@ -1,14 +1,14 @@
 #!/bin/bash
-
-figlet -f slant "Welcome" | lolcat
-echo "  [~] Telegram: qazagymai"
-echo ""
-echo ""
-read -p "  [1] Banner:" banner
-read -p "  [2] User Name:" user
-
-rm -rf /data/data/com.termux/files/usr/etc/motd
-echo "clear && figlet -f standard '${banner}' | lolcat" >> /data/data/com.termux/files/usr/etc/bash.bashrc
-echo "PS1='╔═[${user}]═[\w]\n╚═══≻'" >> /data/data/com.termux/files/usr/etc/bash.bashrc
-clear
+clear &&
+figlet -f slant "Welcome" | lolcat &&
+echo "  [~] Telegram: zharyqtyq" &&
+echo "" &&
+echo "" &&
+read -p "  [~] Banner:" banner &&
+read -p "  [~] User Name:" user &&
+echo "" &&
+rm -rf ~/../usr/etc/motd &&
+echo "clear && figlet '$banner' | lolcat" >> ~/../usr/etc/bash.bashrc &&
+echo "PS1='\e[1;31m╔═[\e[0m$user\e[1;31m]═[\w]\n\e[1;31m╚═══≻\e[0m'" >> ~/../usr/etc/bash.bashrc &&
+clear &&
 echo "Restart Termux"
